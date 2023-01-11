@@ -3,7 +3,9 @@ body {
   font-size: 16px;
   color: #111;
 }
-
+.hidden {
+  display: none;
+}
 a {
   color: inherit;
   text-decoration: none;
@@ -14,7 +16,63 @@ p {
 }
 
 .header {
+  position: fixed;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 50px 175px;
+  width: 100%;
+  height: 150px;
+  box-sizing: border-box;
+  z-index: 99;
+  color: #fff;
+  h1 {
+    width: 136px;
+    height: 100%;
+  }
+  .gnb {
+    &_list {
+      display: flex;
+
+      > li {
+        font-size: 20px;
+        font-weight: 600;
+        padding: 0 60px;
+        align-items: center;
+        a {
+          display: flex;
+          z-index: 99;
+        }
+      }
+    }
+  }
+
   .logo {
+    a {
+      display: flex;
+    }
+    &_img {
+      position: absolute;
+      left: 150px;
+      top: 25px;
+    }
+  }
+
+  .other {
     display: flex;
+    font-size: 15px;
+    a {
+      padding: 10px 20px;
+      background-color: #ff8432;
+      border-radius: 100px;
+    }
+  }
+}
+
+.main-visual {
+  img {
+    position: absolute;
+    width: 100%;
+    object-fit: cover;
   }
 }
