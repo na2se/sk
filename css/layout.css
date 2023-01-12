@@ -18,55 +18,63 @@ p {
 }
 
 .header {
-  position: fixed;
   display: flex;
-  justify-content: end;
+  justify-content: center;
   align-items: center;
-  padding: 50px 175px;
   width: 100%;
   height: 150px;
-  box-sizing: border-box;
+  position: fixed;
   z-index: 99;
+  padding: 50px 175px;
   color: #fff;
-}
-.header h1 {
-  width: 136px;
-  height: 100%;
+  box-sizing: border-box;
 }
 .header .gnb_list {
   display: flex;
 }
-.header .gnb_list > li {
-  font-size: 20px;
-  font-weight: 600;
-  padding: 0 60px;
+.header .gnb_list li {
+  display: flex;
   align-items: center;
+  padding: 0 60px;
+  font-weight: 600;
+  font-size: 20px;
 }
-.header .gnb_list > li a {
+.header .gnb_list li a {
   display: flex;
-  z-index: 99;
 }
-.header .logo a {
-  display: flex;
-}
-.header .logo_img {
+.header .logo a img {
   position: absolute;
-  left: 150px;
   top: 25px;
+  left: 175px;
 }
-.header .other {
+.header .other ul {
   display: flex;
+  position: absolute;
+  top: 55px;
+  right: 175px;
   font-size: 15px;
 }
-.header .other a {
-  padding: 10px 20px;
-  background-color: #ff8432;
+.header .other ul li {
+  display: flex;
+  margin-left: 15px;
+  color: #ababab;
+  background-color: #fff;
   border-radius: 100px;
 }
-
-.main-visual img {
-  position: absolute;
+.header .other ul li a {
+  padding: 10px 20px;
+}
+.header .other ul li:nth-child(1) {
+  color: #fff;
+  background-color: #ff8432;
+}
+.header .other ul li:nth-child(2) {
+  color: #fff;
+  background-color: #ababab;
+}
+.header .main-visual img {
   width: 100%;
+  position: absolute;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
